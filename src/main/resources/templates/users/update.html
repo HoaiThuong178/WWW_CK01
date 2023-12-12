@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form th:action="@{/users}" th:method="put">
+  <label>Mobile</label>
+  <input type="tel" th:field="${user.mobile}">
+  <br>
+  <label>lastLogin</label>
+  <input type="datetime-local" th:field="${user.lastLogin}">
+  <br>
+  <label>lastName</label>
+  <input type="text" th:field="${user.lastName}">
+  <br>
+  <label>intro</label>
+  <input type="text" th:field="${user.intro}">
+  <br>
+  <label>profile</label>
+  <input type="text" th:field="${user.profile}">
+  <br>
+  <label>registeredAt</label>
+  <input type="datetime-local" th:field="${user.registeredAt}">
+  <br>
+  <label>passwordHash</label>
+  <input type="text" th:field="${user.passwordHash}">
+  <br>
+  <label>middleName</label>
+  <input type="text" th:field="${user.middleName}">
+  <br>
+  <label>firstName</label>
+  <input type="text" th:field="${user.firstName}">
+  <br>
+  <label>email</label>
+  <input type="email" th:field="${user.email}">
+  <br>
+  <button type="submit">Update</button>
+</form>
+</body>
+</html>

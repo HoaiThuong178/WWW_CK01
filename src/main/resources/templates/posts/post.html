@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table,tbody,thead,tr,th,td {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<h1>post page</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>published</th>
+        <th>content</th>
+        <th>parent</th>
+        <th>metaTitle</th>
+        <th>summary</th>
+        <th>createAt</th>
+        <th>title</th>
+        <th>author</th>
+        <th>updateAt</th>
+        <th>publishedAt</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="post : ${posts}">
+        <td th:text="${post.id}"></td>
+        <td th:text="${post.published}"></td>
+        <td th:text="${post.content}"></td>
+        <td th:text="${post.parent}"></td>
+        <td th:text="${post.metaTitle}"></td>
+        <td th:text="${post.summary}"></td>
+        <td th:text="${post.createAt}"></td>
+        <td th:text="${post.title}"></td>
+        <td th:text="${post.author.lastName}"></td>
+        <td th:text="${post.updateAt}"></td>
+        <td th:text="${post.publishedAt}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
